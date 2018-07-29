@@ -7,7 +7,7 @@ let bodyparse=require('body-parser');
 let app=express();
 
 /* cargar archivos de rutas */
-
+let project_routes=require('./routes/project');
 /* middlewares */
 app.use(bodyparse.urlencoded({extended:false}));/* configurcion necesaria */
 app.use(bodyparse.json());
@@ -15,10 +15,7 @@ app.use(bodyparse.json());
 /* cors */
 
 /* routing */
-app.get('/test', (request, response)=>{/* request:lo que manda el cliente, response mi respuesta */
-    response.status(200).send({
-        message:'se recibio bien chidori'
-    });/* este es el json que devuelve la peticion, aqui es donde se maneja bien chidori las rutas que se ingresan */
-});
+app.use('/'/* si se quiere sobreescribir la ruta  */, project_routes);
+
 /* esportandolo */
 module.exports=app;/* importo app que ya tiene las configuraciones */
