@@ -1,0 +1,28 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "api rest hecha en curso Master JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrlr14/API-curso-js.git"
+  },
+  "author": "Pedro Gómez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petrlr14/API-curso-js/issues"
+  },
+  "homepage": "https://github.com/petrlr14/API-curso-js#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.1.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
