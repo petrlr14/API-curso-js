@@ -1,0 +1,6 @@
+package.json dependencies:
+express: para poder hacer las rutas 
+body-parser: para poder trabajar las respuestas sin problemas con jsons
+connect-multiparty: es para poder trabajar con imagenes
+mongoose:trabajar con mongodb
+nodemon:es para poder trabajar y que el servidor se reinicie cando hayan cambios en el codigo --save-dev para que solo cuando se trabaje localmente la dependencia tenga efecto
