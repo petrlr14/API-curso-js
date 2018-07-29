@@ -1,5 +1,5 @@
 package.json dependencies:
-express: para poder hacer las rutas 
+express: para poder hacer las rutas y poder recibir peticiones http
 body-parser: para poder trabajar las respuestas sin problemas con jsons
 connect-multiparty: es para poder trabajar con imagenes
 mongoose:trabajar con mongodb
