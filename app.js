@@ -12,7 +12,15 @@ let project_routes=require('./routes/project');
 app.use(bodyparse.urlencoded({extended:false}));/* configurcion necesaria */
 app.use(bodyparse.json());
 
-/* cors */
+/* cors para cuando se trabaje con front end que tenga diferente origen al api */
+
+app.use((req, response, next) => {
+    response.header('Access-Control-Allow-Origin', '*');/* aqui va el origen permitido */
+    response.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    response.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    response.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 
 /* routing */
 app.use('/'/* si se quiere sobreescribir la ruta  */, project_routes);
